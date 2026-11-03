@@ -10,3 +10,13 @@ app.use(express.urlencoded({
 app.listen(port, () => {
     console.log('server jalan di port 3000');
 })
+
+db.sequelize.sync()
+    .then((result) => {
+        app.listen(3000, () => {
+            console.log('Server jalan');
+        })
+    })
+    .catch((err) => {
+        console.log(err);
+    })
