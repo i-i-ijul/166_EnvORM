@@ -16,5 +16,6 @@ module.exports = (sequelize, DataTypes) => {
         author: {
             type: DataTypes.STRING,
         },
-    })
-}
+    });
+    return Komik;
+};
